@@ -523,7 +523,7 @@ pub(crate) fn init_buffers(
                 )),
                 // TODO (ENUM) support writing to Enum
                 dt => polars_bail!(
-                    ComputeError: "unsupported data type when reading CSV: {} when reading CSV", dt,
+                    ComputeError: "unsupported data type when reading CSV: {}. Note that the types i8, u8, i16, u16, date, datetime, and categorical are behind feature flags.", dt,
                 ),
             };
             Ok(builder)
